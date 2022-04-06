@@ -14,7 +14,7 @@ type CSSRule struct {
 	RawOffset int       `json:"-"`
 }
 
-func NewRule(property []byte, line, point int) *CSSRule {
+func NewRule(property []byte, line, point int) *CSSRule { // 属性
 	_, prop, _, offset := utils.ParseBytes(property)
 	return &CSSRule{
 		Property:  string(prop),

@@ -11,7 +11,7 @@ type CSSSelector struct {
 	RawOffset       int    `json:"-"`
 }
 
-func NewSelector(selBytes []byte) *CSSSelector {
+func NewSelector(selBytes []byte) *CSSSelector { // 选择器
 	_, selector, _, offset := utils.ParseBytes(selBytes)
 	var isControl bool
 
